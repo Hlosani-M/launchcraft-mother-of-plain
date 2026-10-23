@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  async redirects() {
+    // Hampers have a dedicated landing page rather than a generic category listing.
+    return [{ source: "/category/hampers", destination: "/hampers", permanent: true }];
+  },
 };
 
 export default nextConfig;
